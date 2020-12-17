@@ -176,7 +176,9 @@ def rotation():
     # Lookup table of the rotation angle
     for i in range(1,popSize):
        for j in range(1,genomeLength):
-           if fitness[i]<fitness[best_chrom[generation]]:
+           if fitness[i]<fitness[best_chrom[generation]]: -> IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+              
+           
              # if chromosome[i,j]==0 and chromosome[best_chrom[generation],j]==0:
                if chromosome[i,j]==0 and chromosome[best_chrom[generation],j]==1:
                    # Define the rotation angle: delta_theta (e.g. 0.0785398163)
